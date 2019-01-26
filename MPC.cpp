@@ -54,7 +54,7 @@ class FG_eval {
 
     // Reference State Cost
     /**
-     * TODO: Define the cost related the reference state and
+     * Define the cost related the reference state and
      *   anything you think may be beneficial.
      */
      for (int t=0; t < N; t++) {
@@ -83,7 +83,7 @@ class FG_eval {
     // The rest of the constraints
     for (int t = 1; t < N; ++t) {
       /**
-       * TODO: Grab the rest of the states at t+1 and t.
+       * Grab the rest of the states at t+1 and t.
        *   We have given you parts of these states below.
        */
       AD<double> x1 = vars[x_start + t];
@@ -114,7 +114,7 @@ class FG_eval {
       // CppAD can compute derivatives and pass these to the solver.
 
       /**
-       * TODO: Setup the rest of the model constraints
+       * Setup the rest of the model constraints
        */
 
       fg[1 + x_start + t] = x1 - (x0 + v0 * CppAD::cos(psi0) * dt);

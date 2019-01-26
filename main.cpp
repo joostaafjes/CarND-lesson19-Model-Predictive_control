@@ -21,7 +21,7 @@ int main() {
   ptsy << -1, -1;
 
   /**
-   * TODO: fit a polynomial to the above x and y coordinates
+   * fit a polynomial to the above x and y coordinates
    */
   auto coeffs = polyfit(ptsx, ptsy, 1);
 
@@ -31,11 +31,11 @@ int main() {
   double psi = 0;
   double v = 10;
   /**
-   * TODO: calculate the cross track error
+   * calculate the cross track error
    */
   double cte = polyeval(coeffs, x) - y;
   /**
-   * TODO: calculate the orientation error
+   * calculate the orientation error
    */
   double epsi = psi - atan(coeffs[1]);
 
